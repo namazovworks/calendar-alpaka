@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar {
+  position: relative;
+  flex: 0 0 33%;
+  min-width: 240px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  background: url(../img/alpaka.jpg) no-repeat center center/cover;
+  z-index: 0;
+}
+
+.calendar::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(19, 20, 23, 0.9);
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 6px;
+}
+
+.calendar__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 8px;
+}
+
+.calendar__btn {
+  display: block;
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.calendar__arrow {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+}
+
+.calendar__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+.calendar__body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar__day {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  aspect-ratio: 1;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.calendar__day._active {
+  background-color: #2d9cdb;
+}
+
+.calendar__day._start {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.calendar__day._start::before,
+.calendar__day._end::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background-color: rgba(19, 20, 23, 0.3);
+  border: 1px solid rgba(19, 20, 23, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.calendar__day._end {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.calendar__day._new {
+  color: rgba(255, 255, 255, 0.5);
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Альпака календарь</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css">
+	<svg display="none">
+		<symbol viewBox="0 0 32 32" id="arrow-right">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M12 11.4L13.5135 10L20 16L13.5135 22L12 20.6L16.973 16L12 11.4Z" fill="currentColor"/>
+		</symbol>
+
+		<symbol viewBox="0 0 32 32" id="arrow-left">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M20 11.4L18.4865 10L12 16L18.4865 22L20 20.6L15.027 16L20 11.4Z" fill="currentColor"/>
+		</symbol>
+	</svg>		
+</head>
+<body>
+	<div class="container">
+		<div class="wrap">
+			<div class="calendar">
+				<div class="calendar__content">
+					<div class="calendar__head">
+						<button type="button" class="calendar__btn">
+							<svg class="calendar__arrow" role="img" aria-label="стрелка влево">
+								<use xlink:href="#arrow-left"/>
+							</svg>
+						</button>
+						<h3 class="calendar__title">Январь</h3>
+						<button type="button" class="calendar__btn">
+							<svg class="calendar__arrow" role="img" aria-label="стрелка вправо">
+								<use xlink:href="#arrow-right"/>
+							</svg>
+						</button>
+					</div>
+					<div class="calendar__body">
+						<button class="calendar__day">1</button>
+						<button class="calendar__day _active _start _end">2</button>
+						<button class="calendar__day">3</button>
+						<button class="calendar__day _active _start">4</button>
+						<button class="calendar__day _active">5</button>
+						<button class="calendar__day _active _end">6</button>
+						<button class="calendar__day">7</button><button class="calendar__day">8</button><button class="calendar__day">9</button><button class="calendar__day">10</button><button class="calendar__day">11</button><button class="calendar__day">12</button><button class="calendar__day">13</button><button class="calendar__day">14</button><button class="calendar__day">15</button><button class="calendar__day">16</button><button class="calendar__day">17</button><button class="calendar__day">18</button><button class="calendar__day">19</button><button class="calendar__day">20</button><button class="calendar__day">21</button><button class="calendar__day">22</button><button class="calendar__day">23</button><button class="calendar__day">24</button><button class="calendar__day">25</button><button class="calendar__day">26</button><button class="calendar__day">27</button><button class="calendar__day">28</button><button class="calendar__day">29</button><button class="calendar__day">30</button>
+						<button class="calendar__day _new">1</button>
+						<button class="calendar__day _new">2</button>
+						<button class="calendar__day _new">3</button>
+						<button class="calendar__day _new">4</button>
+						<button class="calendar__day _new">5</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
